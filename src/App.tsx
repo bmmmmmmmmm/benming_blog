@@ -1,26 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { NotPC } from './pages'
+import routes from './routers/main/PCRouter';
+import HomeRoute from './routers';
+import { BrowserRouter } from "react-router-dom";
+
+const IsPC = () => {
+  const userAgentInfo = navigator.userAgent;
+  const Agents = ["Android", "iPhone",
+    "SymbianOS", "Windows Phone",
+    "iPad", "iPod"];
+  let flag = true;
+  for (let v = 0; v < Agents.length; v++) {
+    if (userAgentInfo.indexOf(Agents[v]) > 0) {
+      flag = false;
+      break;
+    }
+  }
+  return flag;
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  
+  if(IsPC()){
+    return (
+      <BrowserRouter>
+        <HomeRoute routes={routes} />
+      </BrowserRouter>
+    );
+  }
+  return(
+    <NotPC/>
+  )
+
 }
 
 export default App;
