@@ -23,10 +23,10 @@ const Welcome: FC = (): ReactElement => {
   })
 
   return (
-    <div>
-      <h1 id="tittle">本明的<br/>个人博客</h1>
-      <div id="background" ref={bg} style={{ backgroundPosition: bgPosition }}><span>HELLO</span></div>
-      <p id="content">
+    <div >
+      <h1 id="wel-tittle">本明的<br/>个人博客</h1>
+      <div id="wel-background" ref={bg} style={{ backgroundPosition: bgPosition }}><span>HELLO</span></div>
+      <p id="wel-content">
         该发生的<br/>
         总会发生<br/>
         该在发生时引起其他事情发生的<br/>
@@ -35,7 +35,7 @@ const Welcome: FC = (): ReactElement => {
         总会再次发生<br/>
         然而，时间上不必总是遵循前后顺序<br/>
       </p>
-      <button id="btn" onClick={play}>WELCOME</button>
+      <button id="wel-btn" onClick={play}>WELCOME</button>
     </div>
   );
 }

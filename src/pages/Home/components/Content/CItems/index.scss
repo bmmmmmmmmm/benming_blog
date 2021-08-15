@@ -1,0 +1,15 @@
+#CItems{
+  width: 50vw;
+  height: 35vw;
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  background: url(../../../../../assets/images/screen1.png) center center no-repeat;
+  background-size: 70%;
+  -webkit-transition-duration: .5s; /* Safari */
+  transition-duration: .5s;
+}
+
+#CItems:hover{
+  background-size: 73%;
+}

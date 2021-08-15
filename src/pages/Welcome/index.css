@@ -2,10 +2,10 @@ html, body{
   margin: 0;
   padding: 0;
   /* height: 200vh; */
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
-#background{
-  background-image: url(./IMG_68093.jpg);
+#wel-background{
+  background-image: url(../../assets/images/IMG_68093.jpg);
   background-size: cover;
   background-position: 50% 50%;
   height: 200vh;
@@ -18,7 +18,7 @@ html, body{
   text-align: center;
   overflow: hidden;
 }
-#background::before{
+#wel-background::before{
   content: '';
   background-size: cover;
   background-image: inherit;
@@ -30,7 +30,7 @@ html, body{
   left: 0;
   z-index: -99;
 }
-#tittle{
+#wel-tittle{
   color: white;
   position: absolute;
   top: 3vw;
@@ -38,7 +38,7 @@ html, body{
   letter-spacing: 6px;
   width: 100%;
 }
-#content{
+#wel-content{
   height: 35vh;
   line-height: 5vh;
   font-weight: bold;
@@ -60,7 +60,7 @@ html, body{
   /* overflow: hidden; */
   overflow-y: auto
 }
-#background span, #content{
+#wel-background span, #wel-content{
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -68,7 +68,7 @@ html, body{
   -ms-user-select: none;
   user-select: none;
 }
-#btn{
+#wel-btn{
   position: absolute;
   left: 37.5vw;
   /* top: 166vh; */
@@ -85,7 +85,7 @@ html, body{
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
 }
-#btn:hover{
+#wel-btn:hover{
   background-color: white;
   color: black;
 }
