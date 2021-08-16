@@ -1,15 +1,31 @@
-#CItems{
+#citems{
   width: 50vw;
   height: 35vw;
   display: flex;
   justify-content: center;
+  align-items: center;
+  // background: url(../../../../../assets/images/screen1.png) center center no-repeat;
+  // background-size: 70%;
+  // -webkit-transition-duration: 1s; /* Safari */
+  // transition-duration: 1s;
+}
+
+#citems-screen{
+  // display: flex;
+  // justify-content: center;
   // align-items: center;
+  // overflow: visible;
   background: url(../../../../../assets/images/screen1.png) center center no-repeat;
-  background-size: 70%;
+  width: 30%;
+  height: 40%;
+  background-size: 100%;
   -webkit-transition-duration: .5s; /* Safari */
   transition-duration: .5s;
 }
 
-#CItems:hover{
-  background-size: 73%;
+#citems-screen:hover{
+  display: flex;
+  justify-content: center;
+  width: 75%;
+  height: 80%;
 }

@@ -1,8 +1,12 @@
-html, body{
+*{
   margin: 0;
   padding: 0;
-  /* height: 200vh; */
-  /* overflow-x: hidden; */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 #wel-background{
   background-image: url(../../assets/images/IMG_68093.jpg);
@@ -59,14 +63,6 @@ html, body{
   background-color: rgba(0, 0, 0, .3);
   /* overflow: hidden; */
   overflow-y: auto
-}
-#wel-background span, #wel-content{
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 #wel-btn{
   position: absolute;

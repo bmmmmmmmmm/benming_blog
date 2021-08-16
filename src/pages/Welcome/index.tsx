@@ -25,7 +25,7 @@ const Welcome: FC = (): ReactElement => {
   return (
     <div >
       <h1 id="wel-tittle">本明的<br/>个人博客</h1>
-      <div id="wel-background" ref={bg} style={{ backgroundPosition: bgPosition }}><span>HELLO</span></div>
+      <div id="wel-background" ref={bg} style={{ backgroundPosition: bgPosition }}><span>HEELO</span></div>
       <p id="wel-content">
         该发生的<br/>
         总会发生<br/>

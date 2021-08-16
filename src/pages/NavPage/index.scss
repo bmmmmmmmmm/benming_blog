@@ -1,0 +1,101 @@
+// #navpage-topbar{
+//   div{
+//     background-color: #fff;
+//   }
+// }
+
+#navpage{
+  background-color: black;
+  width: 100vw;
+  height: 94vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 100vw;
+
+  .navpage-p{
+    height: 60vh;
+    width: 15vw;
+    margin: 0 1vw;
+    transform-origin: left;
+    transition: all .6s;
+  }
+  #navpage-p1{
+    background-color: #EFD55E;
+    p{
+      margin-left: 2vw;
+      width: 5vw;
+      font-size: 5vw;
+      font-weight: 900;
+      word-wrap: break-word;  
+    }
+  }
+  #navpage-p2{
+    background-color: #89D0C2;
+    p{
+      text-align: right;
+      font-size: 5vw;
+      font-weight: 500;
+    }
+  }
+  #navpage-p3{
+    background-color: #F77A82;
+  }
+  #navpage-p4{
+    background-color: #B7AACB;
+    p{
+      font-size: 10vh;
+      line-height: 10vh;
+      font-weight: 900;
+    }
+    #nav-p4-1, #nav-p4-3, #nav-p4-5{
+      text-align: left;
+      margin-left: 5vw;
+    }
+    #nav-p4-2, #nav-p4-4, #nav-p4-6{
+      text-align: right;
+      margin-right: 1vw;
+    }
+  }
+  #navpage-p5{
+    background-color: #077ABD;
+    text-align: center;
+    #nav-p5-1{
+      font-size: 8vh;
+      font-weight: 900;
+      margin-top: 3vh;
+    }
+    #nav-p5-2{
+      font-size: 4vh;
+      font-weight: 900;
+    }
+    .nav-p5-squa{
+      width: 1.5vw;
+      height: 1.5vw;
+      background-color: black;
+      margin-left: 11vw;
+      margin-bottom: 3vw;
+    }
+    #nav-p5-squa-1{
+      margin-top: 10vh;
+    }
+  }
+  #navpage-p1:hover{
+    transform: rotateY(64deg);
+  }
+  #navpage-p2:hover{
+    transform: rotateY(53deg);
+  }
+  #navpage-p3:hover{
+    transform: rotateY(43deg);
+  }
+  #navpage-p4:hover{
+    transform: rotateY(34deg);
+  }
+  #navpage-p5:hover{
+    transform: rotateY(28deg);
+  }
+  .navpage-p:hover{
+    background-color: #fff!important;
+  }
+}

@@ -1,5 +1,5 @@
 import React, { FC, ReactElement } from 'react';
-import TopBar from './components/TopBar';
+import TopBar from '../../components/TopBar';
 import Content from './components/Content';
 import './index.css'
 
