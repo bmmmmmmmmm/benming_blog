@@ -1,7 +1,7 @@
 import React, { FC, ReactElement, useEffect } from "react";
 import { useHistory } from 'react-router-dom'
 import { Switch, Route, Redirect } from "react-router-dom";
-import { Routes } from '../Typings/router'
+import { Routes } from './Typings/router'
 
 interface Iprpos {
   routes: Routes[] | undefined

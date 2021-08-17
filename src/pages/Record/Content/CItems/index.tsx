@@ -13,8 +13,8 @@ const CItems:FC<RGB> = (props: RGB):ReactElement => {
 
   const { rgb } = props
   return (
-    <div id="citems" style={{backgroundColor:`rgb(${rgb[0]},${rgb[1]},${rgb[2]})`}}>
-      <div id="citems-screen" onClick={()=>turnPage('/notfound')}>
+    <div id="record-content-citems" style={{backgroundColor:`rgb(${rgb[0]},${rgb[1]},${rgb[2]})`}}>
+      <div id="record-content-citems-screen" onClick={()=>turnPage('/notfound')}>
         <p style={{color:`rgb(${255-rgb[0]},${255-rgb[1]},${255-rgb[2]})`}}></p>
       </div>
     </div>

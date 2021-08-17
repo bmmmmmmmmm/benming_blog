@@ -1,4 +1,4 @@
-#citems{
+#record-content-citems{
   width: 50vw;
   height: 35vw;
   display: flex;
@@ -10,12 +10,12 @@
   // transition-duration: 1s;
 }
 
-#citems-screen{
+#record-content-citems-screen{
   // display: flex;
   // justify-content: center;
   // align-items: center;
   // overflow: visible;
-  background: url(../../../../../assets/images/screen1.png) center center no-repeat;
+  background: url(../../../../assets/images/screen1.png) center center no-repeat;
   width: 30%;
   height: 40%;
   background-size: 100%;
@@ -23,7 +23,7 @@
   transition-duration: .5s;
 }
 
-#citems-screen:hover{
+#record-content-citems-screen:hover{
   display: flex;
   justify-content: center;
   width: 75%;

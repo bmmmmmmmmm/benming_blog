@@ -3,13 +3,12 @@ import {
   Home,
   NotPC,
   NotFound,
-  NavPage,
   Note,
   Thinking,
   Projects,
   Record,
 } from '../../pages'
-import { Routes } from '../../Typings/router'
+import { Routes } from '../Typings/router'
 
 
 const routes: Routes[] = [
@@ -24,10 +23,6 @@ const routes: Routes[] = [
   {
     path: "/notFound",
     component: NotFound,
-  },
-  {
-    path: "/navPage",
-    component: NavPage,
   },
   {
     path: "/note",

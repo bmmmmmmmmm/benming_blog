@@ -1,10 +1,10 @@
 import React, { FC, ReactElement } from 'react';
 import CItems from './CItems';
-import './index.css'
+import './index.scss'
 
 const Content:FC = ():ReactElement => {
   return (
-    <div id="content">
+    <div id="record-content">
       <CItems rgb={[183,170,203]}/>
       <CItems rgb={[244,243,241]}/>
       <CItems rgb={[154,210,208]}/>
