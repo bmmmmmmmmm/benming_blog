@@ -7,10 +7,12 @@ import './index.scss'
 
 const Note:FC = ():ReactElement => {
   return (
-    <div id="note">
+    <div>
       <TopBar/>
-      <Banner/>
-      <Content/>
+      <div id="note">
+        <Banner/>
+        <Content/>
+      </div>
     </div>
   );
 }
