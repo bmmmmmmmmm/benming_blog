@@ -5,7 +5,6 @@ const myBirth = 970243200000
 
 const Life:FC = ():ReactElement => {
 
-
   const [life, setlife] = useState(new Date().getTime());
   useEffect(() => {
     const t = setInterval(()=> {
