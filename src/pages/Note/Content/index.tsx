@@ -1,9 +1,9 @@
 import React, { FC, ReactElement, useRef } from 'react';
 import AboutMe from './AboutMe';
 import Notes from './Notes';
-// import Motto from './Motto';
+import Motto from './Motto';
 import Life from './Life';
-import TotalTag from './TotalTag';
+// import TotalTag from './TotalTag';
 import './index.scss'
 
 const Content:FC = ():ReactElement => {
@@ -29,9 +29,9 @@ const Content:FC = ():ReactElement => {
       <Notes/>
       <div id="note-content-right" ref={right}>
         <AboutMe/>
-        {/* <Motto/> */}
         <Life/>
-        <TotalTag/>
+        {/* <TotalTag/> */}
+        <Motto/>
       </div>
     </div>
   );

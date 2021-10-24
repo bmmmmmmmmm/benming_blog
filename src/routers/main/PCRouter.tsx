@@ -27,6 +27,12 @@ const routes: Routes[] = [
   {
     path: "/note",
     component: Note,
+    // children: [
+    //   {
+    //     path: "/123",
+    //     component: ""
+    //   }
+    // ]
   },
   {
     path: "/thinking",

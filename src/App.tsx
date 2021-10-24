@@ -3,6 +3,7 @@ import { NotPC } from './pages'
 import routes from './routers/main/PCRouter';
 import HomeRoute from './routers';
 import { BrowserRouter } from "react-router-dom";
+import Provider from './redux/store';
 
 const IsPC = () => {
   const userAgentInfo = navigator.userAgent;
@@ -23,9 +24,11 @@ function App() {
   
   if(IsPC()){
     return (
-      <BrowserRouter>
-        <HomeRoute routes={routes} />
-      </BrowserRouter>
+      <Provider>
+        <BrowserRouter>
+          <HomeRoute routes={routes} />
+        </BrowserRouter>
+      </Provider>
     );
   }
   return(

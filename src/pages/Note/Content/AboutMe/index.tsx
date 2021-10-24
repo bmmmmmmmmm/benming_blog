@@ -1,13 +1,19 @@
 import React, { FC, ReactElement } from 'react';
+import { createUpdateMyInfoAction } from '../../../../redux/actions';
+import connect from '../../../../redux/connect';
+import { myInfoType } from './typings';
 import './index.scss'
 
-const AboutMe:FC = ():ReactElement => {
+const AboutMe:FC = (props: any):ReactElement => {
+
+  const { notes, myInfo } = props;
+  
   return (
     <div id="note-content-aboutme">
       <div id="note-content-aboutme-img"></div>
-      <div id="note-content-aboutme-name">本明</div>
+      <div id="note-content-aboutme-name">{myInfo.name}</div>
       <div id="note-content-aboutme-total">
-        <div id="note-content-aboutme-article">文章<br />12</div>
+        <div id="note-content-aboutme-article">文章<br />{notes.length}</div>
         <div id="note-content-aboutme-tag">标签<br />2</div>
       </div>
       <div id="note-content-aboutme-btn">加入书签</div>
@@ -22,4 +28,13 @@ const AboutMe:FC = ():ReactElement => {
   );
 }
 
-export default AboutMe;
+const mapStateToProps = (state: any) => ({
+  notes: state.note,
+  myInfo: state.myInfo
+})
+
+const mapDispatchToProps = (dispatch: any) => ({
+  updateMyInfo: (myInfo: myInfoType)=>dispatch(createUpdateMyInfoAction(myInfo))
+})
+
+export default connect({ mapStateToProps, mapDispatchToProps })(AboutMe);

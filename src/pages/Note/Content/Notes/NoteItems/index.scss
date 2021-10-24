@@ -9,13 +9,19 @@
 }
 
 #note-content-notes-noteitems-tittle{
-  font-size: 3vh;
+  font-size: 2.5vh;
   font-weight: 400;
+}
+
+#note-content-notes-noteitems-modified{
+  float: right;
+  font-size: 1.8vh;
+  color: #bbb;
 }
 
 #note-content-notes-noteitems-time{
   font-size: 1.5vh;
-  color: #333;
+  color: #555;
   padding-top: .5vh;
 }
 
