@@ -1,4 +1,4 @@
-import React, { FC, ReactElement, useState, useRef, useEffect } from 'react';
+import React, { FC, ReactElement, useState, useRef } from 'react';
 import { addNote } from '../../util/api/notes';
 import MDEditor from '@uiw/react-md-editor';
 import './index.scss'
