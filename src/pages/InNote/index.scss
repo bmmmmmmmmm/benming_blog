@@ -1,0 +1,23 @@
+#inNote {
+
+  // height: 87vh;
+  height: 100%;
+  padding: 13vh 0;
+  background-color: #eee;
+  
+  #inNote-editor {
+    padding: 7vh 13vh;
+    background-color: #fff;
+    border-radius: 1vw;
+  }
+
+  .inNote-editor-pc {
+    width: 50%;
+    margin: auto;
+  }
+  
+  .inNote-editor-mobile {
+    width: 90%;
+    margin: auto;
+  }
+}

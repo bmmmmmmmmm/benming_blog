@@ -1,0 +1,43 @@
+#AddNote {
+  height: 10vh;
+  display: flex;
+  // justify-content: space-around;
+  align-items: center;
+
+  #AddNote-d1 {
+    width: 15vw;
+    font-size: 2vw;
+    letter-spacing: 1vw;
+    padding-left: 7vw;
+  }
+
+  #AddNote-d2 {
+    width: 55vw;
+    border: 2px solid #ccc;
+    padding: 0 3vw;
+    input {
+      font-size: 2vw;
+      height: 10vh;
+      width: 100%;
+      background: none;  
+      outline: none;  
+      border: none;
+    }
+  }
+
+  #AddNote-d3 {
+    width: 30vw;
+    button {
+      width: 30vw;
+      height: 10vh;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      font-size: 2vw;
+      letter-spacing: 1vw;
+    }
+    button:hover{
+      background-color: #eee;
+    }
+  }
+}

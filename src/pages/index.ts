@@ -6,6 +6,8 @@ import Note from "./Note";
 import Thinking from "./Thinking";
 import Projects from "./Projects";
 import Record from "./Record";
+import InNote from "./InNote";
+import AddNote from "./AddNote";
 
 
 export {
@@ -16,5 +18,7 @@ export {
   Note,
   Thinking,
   Projects,
-  Record
+  Record,
+  InNote,
+  AddNote,
 }

@@ -7,6 +7,8 @@ import {
   Thinking,
   Projects,
   Record,
+  InNote,
+  AddNote,
 } from '../../pages'
 import { Routes } from '../Typings/router'
 
@@ -27,12 +29,6 @@ const routes: Routes[] = [
   {
     path: "/note",
     component: Note,
-    // children: [
-    //   {
-    //     path: "/123",
-    //     component: ""
-    //   }
-    // ]
   },
   {
     path: "/thinking",
@@ -47,8 +43,16 @@ const routes: Routes[] = [
     component: Record,
   },
   {
+    path: "/inNote",
+    component: InNote,
+  },
+  {
+    path: "/addNote",
+    component: AddNote,
+  },
+  {
     path: "/",
-    component: Welcome
+    component: Welcome,
   }
 ];
 

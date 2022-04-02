@@ -17,8 +17,9 @@ const Life:FC = ():ReactElement => {
 
   return (
     <div id="note-content-life">
-      <p id="note-content-life-p1">生命已过</p>
-      <p id="note-content-life-p2">{Math.round((life-myBirth)/1000)} 秒</p>
+      {/* <p id="note-content-life-p1">生命已过</p>
+      <p id="note-content-life-p2">{Math.round((life-myBirth)/1000)} 秒</p> */}
+      <p id="note-content-life-p3">{Math.round((life-myBirth)/1000)}</p>
     </div>
   );
 }

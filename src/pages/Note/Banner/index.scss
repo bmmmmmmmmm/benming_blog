@@ -1,13 +1,17 @@
 #note-banner{
   width: 100vw;
-  height: 45vh;
-  background-color: #71838F;
+  height: 25vw;
+  overflow: hidden;
+  // background-color: #71838F;
   // background-color: #B7E0FF;
+  img {
+    width: 100%;
+  }
 }
 
-#note-banner-tit{
-  font-size: 10vh;
-  line-height: 45vh;
-  text-align: center;
-  font-weight: 900;
-}
+// #note-banner-tit{
+//   font-size: 10vh;
+//   line-height: 45vh;
+//   text-align: center;
+//   font-weight: 900;
+// }

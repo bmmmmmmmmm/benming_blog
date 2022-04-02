@@ -1,6 +1,7 @@
 import React, { FC, ReactElement } from 'react';
 import { createUpdateMyInfoAction } from '../../../../redux/actions';
 import connect from '../../../../redux/connect';
+import tx from '../../../../assets/images/IMG_9522.jpg'
 import { myInfoType } from './typings';
 import './index.scss'
 
@@ -10,11 +11,14 @@ const AboutMe:FC = (props: any):ReactElement => {
   
   return (
     <div id="note-content-aboutme">
-      <div id="note-content-aboutme-img"></div>
+      <div id="note-content-aboutme-img">
+        <img src={tx} alt=" " />
+      </div>
       <div id="note-content-aboutme-name">{myInfo.name}</div>
       <div id="note-content-aboutme-total">
         <div id="note-content-aboutme-article">文章<br />{notes.length}</div>
-        <div id="note-content-aboutme-tag">标签<br />2</div>
+        {/* <div id="note-content-aboutme-tag">标签<br />2</div> */}
+        <div id="note-content-aboutme-tag"><del>标签<br />2</del></div>
       </div>
       <div id="note-content-aboutme-btn">加入书签</div>
       <div id="note-content-aboutme-relate">

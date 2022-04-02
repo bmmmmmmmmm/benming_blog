@@ -17,6 +17,7 @@ const HomeRoute:FC<Iprpos> = ({
       window.scrollTo(0, 0);
     })
   });
+  
   return(
     <Switch>
       {routes !== undefined

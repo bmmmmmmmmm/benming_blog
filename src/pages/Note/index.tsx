@@ -1,7 +1,7 @@
 import React, { FC, ReactElement, useEffect } from 'react';
 import { createUpdateNoteAction, createUpdateMyInfoAction } from '../../redux/actions';
 import connect from '../../redux/connect';
-import { getNotes } from '../../util/api/notes';
+import { showNotes } from '../../util/api/notes';
 import { getMyInfo } from '../../util/api/myInfo';
 import { NoteItemType } from './Content/Notes/Typings';
 import { myInfoType } from './Content/AboutMe/typings';
@@ -17,7 +17,7 @@ const Note:FC = (props: any):ReactElement => {
   useEffect(() => {
     const gainNotes = async ()=> {
       try {
-        const result:any = await getNotes()
+        const result:any = await showNotes()
         if(result.data.masg === "success!")
           updateNote(result.data.data)
       } catch (error) {

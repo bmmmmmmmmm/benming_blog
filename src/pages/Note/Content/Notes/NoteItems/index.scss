@@ -3,9 +3,15 @@
   height: 11vh;
   border-radius: 1vw;
   margin-top: 1.5vw;
-  background-color: white;
+  background-color: #fff;
   padding: 2vh 1.5vw;
   position: relative;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+#note-content-notes-noteitems:hover{
+  box-shadow:rgba(0,0,0,.3) 0px 0px 15px;
 }
 
 #note-content-notes-noteitems-tittle{
