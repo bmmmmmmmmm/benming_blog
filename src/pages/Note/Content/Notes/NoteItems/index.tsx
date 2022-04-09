@@ -7,9 +7,11 @@ const NoteItems:FC<NoteItemType> = (prop: NoteItemType):ReactElement => {
   const { _id, title, createdAt, updatedAt, tags } = prop
 
   // const history = useHistory()
+
   const turnPage = (page:string)=> {
     // history.push(page)
-    window.open('_black')!.location.href = `http://www.koubenming.com${page}`
+    const href = window.location.href.slice(0,-5)
+    window.open('_black')!.location.href = `${href}${page}`
   }
   const date = new Date(createdAt)
   const createDate = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}` 
