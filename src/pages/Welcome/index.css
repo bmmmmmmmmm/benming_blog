@@ -85,8 +85,7 @@
   background-color: white;
   color: black;
 }
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 0;
   background: rgba(0, 0, 0, 0);
-  /* display: none; */
-}
+} */

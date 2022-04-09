@@ -1,27 +1,60 @@
+#inNote-editor * {
+  -webkit-user-select: text !important;
+  -khtml-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
+}
+
 #inNote {
 
   // height: 87vh;
-  height: 100%;
+  min-height: 74vh;
   padding: 13vh 0;
   background-color: #eee;
   
   #inNote-editor {
-    padding: 7vh 13vh;
+    // box-sizing: border-box;
+    padding: 7vh 5vw;
     background-color: #fff;
     border-radius: 1vw;
   }
 
   .inNote-editor-pc {
-    width: 50%;
-    margin: auto;
+    width: 50vw;
+    margin-left: 10vw;
   }
   
   .inNote-editor-mobile {
-    width: 90%;
+    width: 90vw;
     margin: auto;
   }
 
   #inNote-catlog {
-    
+    box-sizing: border-box;
+    font-size: 2vh;
+    line-height: 4vh;
+    letter-spacing: 0.1vh;
+    font-weight: 600;
+    position: fixed;
+    overflow: scroll;
+    white-space: nowrap;
+    background-color: #fff;
+    border-radius: 1vw;
+    border: 10px solid #fff;
+    padding: 20px;
+    width: 15vw;
+    height: 70vh;
+    right: 10vw;
+    top: 13vh;
+
+    div a{
+      text-decoration:none;
+      color:#333;
+    }
+
+    div a:hover{
+      color: #888;
+    }
   }
 }

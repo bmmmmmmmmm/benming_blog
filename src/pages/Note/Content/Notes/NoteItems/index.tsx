@@ -1,14 +1,15 @@
 import React, { FC, ReactElement } from 'react';
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 import { NoteItemType } from '../Typings/index';
 import './index.scss'
 
 const NoteItems:FC<NoteItemType> = (prop: NoteItemType):ReactElement => {
   const { _id, title, createdAt, updatedAt, tags } = prop
 
-  const history = useHistory()
+  // const history = useHistory()
   const turnPage = (page:string)=> {
-    history.push(page)
+    // history.push(page)
+    window.open('_black')!.location.href = `http://www.koubenming.com${page}`
   }
   const date = new Date(createdAt)
   const createDate = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}` 

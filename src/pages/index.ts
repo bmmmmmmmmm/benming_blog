@@ -8,6 +8,7 @@ import Projects from "./Projects";
 import Record from "./Record";
 import InNote from "./InNote";
 import AddNote from "./AddNote";
+import './newCss.scss';
 
 
 export {

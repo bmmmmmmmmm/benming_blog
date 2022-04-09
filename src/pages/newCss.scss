@@ -1,0 +1,32 @@
+// note页图片下渐变
+// #note-banner {
+//   box-shadow:rgba(135,206,250,.6) 0px 0px 150px;
+// }
+
+// 博客列表模块边缘
+#note-content-aboutme,#note-content-life,#note-content-motto,#note-content-totaltag,#note-content-notes-noteitems {
+  box-shadow:rgba(0,0,0,.1) 0px 0px 15px;
+}
+
+// 博客正文模块边缘
+#inNote-editor,#inNote-catlog {
+  box-shadow:rgba(0,0,0,.2) 0px 0px 20px;
+}
+
+// 新背景色
+#note,#inNote {
+  background-color: #f0f8ff;
+}
+
+// note页按钮颜色
+#note-content-aboutme-btn {
+  background-color: #87ceeb;
+  border: #87ceeb 3px solid;
+}
+
+// note页时间
+#note-content-life:hover {
+  color: red;
+  font-weight: 900;
+  box-shadow:rgba(255,0,0,.2) 0px 0px 20px;
+}

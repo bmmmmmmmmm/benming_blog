@@ -21,32 +21,61 @@ const InNote:FC = ():ReactElement => {
     const clientW = document.documentElement.clientWidth;
     widthShow.current.className = clientW > 768 ? 'inNote-editor-pc' : 'inNote-editor-mobile'
 
+    const valueOut = setTimeout(()=>{
+      setValue('出错了，数据失联了～')
+    }, 5000)
+
     const gainSingleNote = async ()=> {
-      // console.log('axios');
       try {
         const result:any = await getNote({ id: location.pathname.slice(8) })
         if(result.data.masg === "success!"){
           setValue(result.data.data.content);
           getCatlog(result.data.data.content);
+          clearTimeout(valueOut);
         }
       } catch (error) {
         console.log(error);
       }
     }
 
+    // 获取目录
     const getCatlog = (value:any)=>{
-      let toc = [];
-      let reg = /(#+)\s+?(.+?)\n/g;
-      let regExecRes = null
-      while((regExecRes = reg.exec(value))) {
-        toc.push({
-          level: regExecRes[1].length,
-          title: regExecRes[2]
-        });
-      }
-      // catlog.current = toc;
-      // console.log(toc);
-      
+      let toc: any[] = [];
+      // let reg = /(#+)\s+?(.+?)\n/g;
+      // let regExecRes = null
+      // while((regExecRes = reg.exec(value))) {
+      //   toc.push({
+      //     level: regExecRes[1].length,
+      //     title: regExecRes[2]
+      //   });
+      // }
+      value
+        .replace(/```/g, function () {
+          return '\f'
+        })
+        .replace(/\f[^\f]*?\f/g, function () {
+          return ''
+        })
+        .replace(/\r|\n+/g, function () { 
+          return '\n'
+        })
+        .replace(/\[(.*)\]\((.*)\)/g, function () {
+          return ''
+        })
+        .replace(/(http)(.*)\s/g, function () {
+          return ''
+        })
+        .replace(/(#+)[^\n]*?(?:\n)/g, function (match:any) {
+          var title = match
+            .replace(/\([^)]*?\)/, '') // 去掉标题中可能存在的链接
+            .replace('\n', '') // 去掉行尾换行符
+            .replace(/^#+\s/, '') // 去掉 #
+            .replace(/[A-Z]/g,function(match:any){return match.toLowerCase()})
+            .match(/[0-9A-Za-z\u4e00-\u9fa5_-]/g)
+          toc.push(title.join(''))
+        })
+        // console.log(toc);
+        
       setCatlog(toc);
     }
 
@@ -61,9 +90,9 @@ const InNote:FC = ():ReactElement => {
       </div>
       <div id="inNote-catlog">
         {
-          catlog?.map((item:any)=>{
-            let href = `#${item.title}`;
-            return <a href={href}>{item.title}</a>
+          catlog?.map((item:any, index:any)=>{
+            let href = `#${item}`;
+            return <div key={index}><a href={href}>{item}</a></div>
           })
         }
       </div>

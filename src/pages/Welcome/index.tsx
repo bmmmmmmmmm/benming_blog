@@ -7,8 +7,8 @@ const Welcome: FC = (): ReactElement => {
   // const audio = new Audio(url);
   const history = useHistory()
   const play = ()=> {
-    // cli()
-    history.push('/home')
+    // history.push('/home')
+    history.push('/note')
   }
 
   const bg = useRef(null)
