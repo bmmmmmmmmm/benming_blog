@@ -56,5 +56,12 @@
     div a:hover{
       color: #888;
     }
+
+  }
+
+  #inNote-catlog::-webkit-scrollbar {
+    width: 0;
+    background: rgba(0, 0, 0, 0);
+    display: none;
   }
 }

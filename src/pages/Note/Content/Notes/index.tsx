@@ -22,11 +22,6 @@ const Notes:FC = (props: any):ReactElement => {
           <NoteItems key = {element._id} _id = {element._id} title = {element.title} createdAt = { element.createdAt } updatedAt = { element.updatedAt } tags = { element.tags } />
         )
       }
-      <NoteItems _id='123' title='标题' createdAt='123' updatedAt='234' tags='1'/>
-      <NoteItems _id='1234' title='标题' createdAt='123' updatedAt='234' tags={1}/>
-      <NoteItems _id='1235' title='标题' createdAt='123' updatedAt='234' tags={[1,2,3]}/>
-      <NoteItems _id='1236' title='标题' createdAt='123' updatedAt='234' tags={['1','3']}/>
-      <NoteItems _id='1237' title='标题' createdAt='123' updatedAt='234' tags={['1',4]}/>
     </div>
   );
 }
