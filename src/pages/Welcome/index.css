@@ -15,7 +15,7 @@
   /* background-image: url(https://tva1.sinaimg.cn/large/e6c9d24ely1h16to6yai2j21900u0420.jpg); */
   background-size: cover;
   background-position: 50% 50%;
-  height: 200vh;
+  height: 170vh;
   font: 900 25vw '';
   line-height: 100vh;
   -webkit-background-clip: text;
@@ -24,6 +24,7 @@
   position: relative;
   text-align: center;
   overflow: hidden;
+  padding-top: 30vh;
 }
 #wel-background::before{
   content: '';
@@ -37,6 +38,18 @@
   left: 0;
   z-index: -99;
 }
+#wel-down{
+  width: 100px;
+  height: 100px;
+}
+#wel-down svg{
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+#wel-down svg:hover{
+  width: 70px;
+  height: 70px;
+}
 #wel-tittle{
   color: white;
   position: absolute;
@@ -44,6 +57,14 @@
   text-align: center;
   letter-spacing: 6px;
   width: 100%;
+}
+#wel-down{
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  position: absolute;
+  top: 50vh;
+  z-index: 100;
 }
 #wel-content{
   height: 35vh;
