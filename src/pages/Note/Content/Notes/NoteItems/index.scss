@@ -1,5 +1,5 @@
-#note-content-notes-noteitems{
-  width: 57vw;
+#note-content-notes-noteitems {
+  width: 45vw;
   height: 11vh;
   border-radius: 1vw;
   margin-top: 1.5vw;
@@ -10,38 +10,38 @@
   transition-duration: 0.4s;
 }
 
-#note-content-notes-noteitems:hover{
-  box-shadow:rgba(0,0,0,.3) 0px 0px 15px;
+#note-content-notes-noteitems:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 15px;
 }
 
-#note-content-notes-noteitems-tittle{
+#note-content-notes-noteitems-tittle {
   font-size: 2.5vh;
   font-weight: 500;
   letter-spacing: 0.15vh;
 }
 
-#note-content-notes-noteitems-modified{
+#note-content-notes-noteitems-modified {
   float: right;
   font-size: 1.8vh;
   color: #bbb;
 }
 
-#note-content-notes-noteitems-time{
+#note-content-notes-noteitems-time {
   font-size: 1.5vh;
   color: #555;
-  padding-top: .5vh;
+  padding-top: 0.5vh;
 }
 
-#note-content-notes-noteitems-tag{
+#note-content-notes-noteitems-tag {
   position: absolute;
   bottom: 2vh;
-  div{
+  div {
     height: 3vh;
     padding: 0 1vh;
     font-size: 2vh;
     margin-right: 1vh;
     display: inline-block;
     background-color: aquamarine;
-    border-radius: .6vh;
+    border-radius: 0.6vh;
   }
 }
