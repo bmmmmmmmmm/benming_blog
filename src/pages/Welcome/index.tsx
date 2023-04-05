@@ -71,13 +71,13 @@ const Welcome: FC = (): ReactElement => {
         该在发生时引起本身再次发生的<br/>
         总会再次发生<br/>
         然而，时间上不必总是遵循前后顺序<br/> */}
-        <p style={{color: '#fff'}}>“我看见这一代最杰出的头脑毁于正常”</p>
+        <p style={{color: '#fff', opacity: '1'}}>“我看见这一代最杰出的头脑毁于正常”</p>
         <p style={{color: '#ddd'}}>“我看见这一代最杰出的头脑毁于正常”</p>
         <p style={{color: '#bbb'}}>“我看见这一代最杰出的头脑毁于正常”</p>
         <p style={{color: '#999'}}>“我看见这一代最杰出的头脑毁于正常”</p>
         <p style={{color: '#777'}}>“我看见这一代最杰出的头脑毁于正常”</p>
+        <p style={{color: '#666'}}>“我看见这一代最杰出的头脑毁于正常”</p>
         <p style={{color: '#555'}}>“我看见这一代最杰出的头脑毁于正常”</p>
-        <p style={{color: '#333'}}>“我看见这一代最杰出的头脑毁于正常”</p>
       </div>
       <button id="wel-btn" onClick={play}>WELCOME</button>
     </div>
