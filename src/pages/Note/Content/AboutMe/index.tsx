@@ -18,7 +18,7 @@ const AboutMe:FC = (props: any):ReactElement => {
       <div id="note-content-aboutme-total">
         <div id="note-content-aboutme-article">文章<br />{notes.length}</div>
         {/* <div id="note-content-aboutme-tag">标签<br />2</div> */}
-        <div id="note-content-aboutme-tag"><del>标签<br />2</del></div>
+        <div id="note-content-aboutme-tag"><del>标签<br />4</del></div>
       </div>
       <div id="note-content-aboutme-btn">加入书签</div>
       <div id="note-content-aboutme-relate">

@@ -7,6 +7,11 @@ const NoteItems:FC<NoteItemType> = (prop: NoteItemType):ReactElement => {
   const { _id, title, createdAt, updatedAt, tags } = prop
 
   // const history = useHistory()
+  // const colors = ['#EFD55E', '#89D0C2', '#F77A82', '#B7AACB', '#077ABD']
+  const colors = ['#B7E0FF', '#CFEADC', '#FBEDCA', '#E8EADC', '#FEDEE1']
+  const getTagColor = () => {
+    return colors[Math.floor(Math.random() * 5)]
+  }
 
   const turnPage = (page:string)=> {
     // history.push(page)
@@ -23,8 +28,8 @@ const NoteItems:FC<NoteItemType> = (prop: NoteItemType):ReactElement => {
       <div id="note-content-notes-noteitems-tag">
         {
           tags ? typeof(tags)==='string'||typeof(tags)==='number' ?
-          <div>{tags}</div> :
-          tags!.map((item)=> <div>{item}</div> ) : <></>
+          <div key={window.btoa(String(tags))} style={{backgroundColor: getTagColor()}}>{tags}</div> :
+          tags!.map((item) => <div key={window.btoa(String(item))} style={{backgroundColor: getTagColor()}}>{item}</div>) : <></>
         }
       </div>
     </div>

@@ -9,10 +9,8 @@
   user-select: none;
 }
 #wel-background{
-  /* background-image: url(../../assets/images/IMG_68093.jpg); */
-  /* background-image: url(https://tva1.sinaimg.cn/large/e6c9d24ely1h14v9xyjbgj217z0u07fq.jpg); */
-  background-image: url(https://tva1.sinaimg.cn/large/e6c9d24ely1h16tkr5n2dj215o0nd7br.jpg);
-  /* background-image: url(https://tva1.sinaimg.cn/large/e6c9d24ely1h16to6yai2j21900u0420.jpg); */
+  /* background-image: url('http://blog-oss.kbm.ink/114450.jpg'); */
+  background-image: url('http://blog-oss.kbm.ink/083656.jpg');
   background-size: cover;
   background-position: 50% 50%;
   height: 170vh;

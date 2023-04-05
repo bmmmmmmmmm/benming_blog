@@ -21,7 +21,7 @@ const IsPC = () => {
 }
 
 function App() {
-  
+  console.log('========');
   if(IsPC()){
     return (
       <Provider>
