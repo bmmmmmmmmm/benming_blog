@@ -10,6 +10,10 @@
   z-index: 500;
 }
 
+#topbar-left, #topbar-right {
+  cursor: pointer;
+}
+
 #topbar-left{
   /* background-color: aqua; */
   width: 10vh;
@@ -18,10 +22,10 @@
 
 #topbar-left svg{
   /* background-color: blue; */
-  width: 4vh;
-  height: 4vh;
-  padding-left: 4.1vh;
-  padding-top: 1vh;
+  width: 3vh;
+  height: 3vh;
+  padding-left: 2vh;
+  padding-top: 1.5vh;
 }
 
 #topbar-middle{
@@ -41,6 +45,6 @@
 #topbar-right svg{
   width: 3vh;
   height: 3vh;
-  padding-left: 4.1vh;
+  padding-left: 5vh;
   padding-top: 1.5vh;
 }

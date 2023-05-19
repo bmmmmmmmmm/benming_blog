@@ -10,13 +10,9 @@
   // transition-duration: 1s;
 }
 
+// 原方案：鼠标 hover 之后放大，但要有两张背景叠加，且其中一张不固定，不好实现
 #record-content-citems-screen{
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // overflow: visible;
-  // background: url(../../../../assets/images/screen1.png) center center no-repeat;
-  background: url(https://tva1.sinaimg.cn/large/e6c9d24ely1h14vdpij7xj20pk0jd3yt.jpg) center center no-repeat;
+  background: url(https://blog-oss.kbm.ink/111104.png) center center no-repeat;
   width: 30%;
   height: 40%;
   background-size: 100%;
@@ -30,3 +26,12 @@
   width: 75%;
   height: 80%;
 }
+
+// // 现方案：大小写死，无动画
+// #record-content-citems-screen{
+//   display: flex;
+//   justify-content: center;
+//   width: 75%;
+//   height: 80%;
+//   // background-size: 100%;
+// }

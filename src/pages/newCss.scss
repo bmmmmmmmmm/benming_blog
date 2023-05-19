@@ -36,6 +36,16 @@
   box-shadow:rgba(255,0,0,.2) 0px 0px 20px;
 }
 
+// 未定义页面
+.unfinished-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  font-weight: 900;
+}
+
 // // 滚动条
 // ::-webkit-scrollbar {
 //   background-color: #f1f1f1;

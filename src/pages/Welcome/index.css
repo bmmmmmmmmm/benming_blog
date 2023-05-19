@@ -39,6 +39,7 @@
 #wel-down{
   width: 100px;
   height: 100px;
+  cursor: pointer;
 }
 #wel-down svg{
   -webkit-animation: 0.7s wel-down-dance 3;
@@ -107,6 +108,7 @@
   height: 10vh;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
+  cursor: pointer;
 }
 #wel-btn:hover{
   background-color: white;
