@@ -13,15 +13,14 @@ const NoteItems:FC<NoteItemType> = (prop: NoteItemType):ReactElement => {
     return colors[Math.floor(Math.random() * 5)]
   }
 
-  const turnPage = (page:string)=> {
-    // history.push(page)
+  const openPage = (page:string)=> {
     const href = window.location.href.slice(0,-5)
     window.open('_black')!.location.href = `${href}${page}`
   }
   const date = new Date(createdAt)
   const createDate = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}` 
   return (
-    <div id="note-content-notes-noteitems" onClick={()=>turnPage(`/inNote/${_id}`)}>
+    <div id="note-content-notes-noteitems" onClick={()=>openPage(`/inNote/${_id}`)}>
       <div id="note-content-notes-noteitems-tittle">{title ? title : "标题为空"}</div>
       <div id="note-content-notes-noteitems-modified">{createdAt === updatedAt ? '' : '已修改'}</div>
       <div id="note-content-notes-noteitems-time">{createDate}</div>
