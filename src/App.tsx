@@ -33,6 +33,11 @@ function App() {
   }
   return(
     <NotPC/>
+    // <Provider>
+    //   <BrowserRouter>
+    //     <HomeRoute routes={routes} />
+    //   </BrowserRouter>
+    // </Provider>
   )
 
 }

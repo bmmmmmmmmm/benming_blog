@@ -65,3 +65,11 @@
     display: none;
   }
 }
+
+.inNote-editor-no-catlog {
+  display: flex;
+  justify-content: center;
+  #inNote-editor {
+    margin-left: 0;
+  }
+}

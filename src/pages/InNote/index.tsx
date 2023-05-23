@@ -84,18 +84,20 @@ const InNote:FC = ():ReactElement => {
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
-    <div id="inNote">
+    <div id="inNote" className={!catlog?.length ? 'inNote-editor-no-catlog' : ''}>
       <div id="inNote-editor" ref={widthShow}>
         <MDEditor.Markdown source={value} />
       </div>
-      <div id="inNote-catlog">
-        {
-          catlog?.map((item:any, index:any)=>{
-            let href = `#${item}`;
-            return <div key={index}><a href={href}>{item}</a></div>
-          })
-        }
-      </div>
+      {!!catlog?.length &&
+        <div id="inNote-catlog">
+          {
+            catlog?.map((item:any, index:any)=>{
+              let href = `#${item}`;
+              return <div key={index}><a href={href}>{item}</a></div>
+            })
+          }
+        </div>
+      }
     </div>
   );
 }
