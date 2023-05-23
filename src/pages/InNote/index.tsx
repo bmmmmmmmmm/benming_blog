@@ -1,25 +1,24 @@
-import React, { FC, ReactElement, useEffect, useRef, useState } from 'react';
+import React, { FC, ReactElement, useCallback, useEffect, useRef, useState } from 'react';
 import { getNote } from '../../util/api/notes';
 import { useLocation } from 'react-router-dom'
 import MDEditor from '@uiw/react-md-editor';
 import './index.scss'
 
 const InNote:FC = ():ReactElement => {
-
-  const widthShow = useRef<any>(null)
-
-  // const catlog = useRef<any>(null)
-
   const location = useLocation();
 
   const [value, setValue] = useState<any>('正在努力请求数据～～');
 
-  const [catlog, setCatlog] = useState<any>(null);
+  const [catlog, setCatlog] = useState<any[]>([]);
+
+  const [catlogShow, setCatlogShow] = useState<boolean>(false)
+
+  const [isPC, setIsPC] = useState<boolean>(true)
 
   useEffect(() => {
 
     const clientW = document.documentElement.clientWidth;
-    widthShow.current.className = clientW > 768 ? 'inNote-editor-pc' : 'inNote-editor-mobile'
+    setIsPC(clientW > 768)
 
     const valueOut = setTimeout(()=>{
       setValue('出错了，数据失联了～')
@@ -76,25 +75,43 @@ const InNote:FC = ():ReactElement => {
         })
         // console.log(toc);
         
-      setCatlog(toc);
+      if(toc.length) {
+        setCatlog(toc);
+        setCatlogShow(true)
+      }
     }
 
     gainSingleNote()
 
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
+  const onKeyDown = useCallback((e: KeyboardEvent) => {
+    if(e.key === 'K' && isPC) {
+      setCatlogShow(!catlogShow)
+    }
+  }, [catlogShow, isPC])
+
+  useEffect(() => {
+    window.addEventListener('keydown', onKeyDown);
+    return () => {
+      window.removeEventListener('keydown', onKeyDown);
+    };
+  }, [onKeyDown]);
+
   return (
-    <div id="inNote" className={!catlog?.length ? 'inNote-editor-no-catlog' : ''}>
-      <div id="inNote-editor" ref={widthShow}>
+    <div id="inNote" className={catlogShow ? '' : 'inNote-editor-no-catlog'}>
+      <div id="inNote-editor" className={isPC ? 'inNote-editor-pc' : 'inNote-editor-mobile'}>
         <MDEditor.Markdown source={value} />
       </div>
-      {!!catlog?.length &&
+      {console.log(catlogShow)}
+      {catlogShow &&
         <div id="inNote-catlog">
           {
-            catlog?.map((item:any, index:any)=>{
+            catlog.length ? catlog.map((item:any, index:any)=>{
               let href = `#${item}`;
               return <div key={index}><a href={href}>{item}</a></div>
             })
+            : '没有目录'
           }
         </div>
       }
