@@ -6,7 +6,7 @@ const Record:FC = ():ReactElement => {
     <div className='unfinished-page' onClick={() => setPicShow(!picShow)} >
       {
         picShow ? <img src="http://blog-oss.kbm.ink/095848.png" alt="我想记录生活 可我快不再年轻" />
-        : '永远有人正在年轻'
+        : '永远有人正年轻'
       }
       
     </div>
