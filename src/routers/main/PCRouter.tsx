@@ -5,8 +5,8 @@ import {
   NotFound,
   Note,
   Thinking,
-  Projects,
   Record,
+  Hut,
   InNote,
   AddNote,
 } from '../../pages'
@@ -35,8 +35,8 @@ const routes: Routes[] = [
     component: Thinking,
   },
   {
-    path: "/project",
-    component: Projects,
+    path: "/hut",
+    component: Hut,
   },
   {
     path: "/record",

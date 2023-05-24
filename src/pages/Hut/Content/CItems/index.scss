@@ -1,0 +1,54 @@
+#hut-content-citems{
+  width: 50vw;
+  height: 35vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background: url(../../../../../assets/images/screen1.png) center center no-repeat;
+  // background-size: 70%;
+  // -webkit-transition-duration: 1s; /* Safari */
+  // transition-duration: 1s;
+}
+
+// 原方案：鼠标 hover 之后放大，但要有两张背景叠加，且其中一张不固定，不好实现
+// #hut-content-citems-screen{
+//   background: url(https://blog-oss.kbm.ink/111104.png) center center no-repeat;
+//   // background: url(http://blog-oss.kbm.ink/082049.png) center center no-repeat;
+//   width: 30%;
+//   height: 40%;
+//   background-size: 100%;
+//   -webkit-transition-duration: .5s; /* Safari */
+//   transition-duration: .5s;
+// }
+
+// #hut-content-citems-screen:hover{
+//   display: flex;
+//   justify-content: center;
+//   width: 75%;
+//   height: 80%;
+// }
+
+// 现方案：大小写死，无动画
+// #hut-content-citems-screen{
+//   display: flex;
+//   justify-content: center;
+//   width: 75%;
+//   height: 80%;
+//   // background-size: 100%;
+// }
+
+#hut-content-citems-iframe-box {
+  // background-color: rgba(0,0,0,0.5);
+  background-color: #fff;
+  overflow: hidden;
+  width: 27.6vw;
+  margin-left: 1.25vw;
+  height: 15.6vw;
+  margin-top: 3vw;
+}
+
+#hut-content-citems-iframe {
+  transform-origin: top left;
+  position: relative;
+  right: 2.45vw;
+}

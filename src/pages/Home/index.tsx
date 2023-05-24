@@ -4,14 +4,11 @@ import TopBar from '../../components/TopBar';
 import './index.scss'
 
 const Home:FC = ():ReactElement => {
-
   const history = useHistory()
   const turnPage = (page:string)=> {
     history.push(page)
   }
-  const openPage = (href:string)=> {
-    window.open('_black')!.location.href = href
-  }
+
   const onc = ()=> {
     alert('To be continued')
   }
@@ -26,7 +23,7 @@ const Home:FC = ():ReactElement => {
           <p>Think</p>
           <p>ing</p>
         </div>
-        <div id="home-p3" className="home-p" onClick={()=>openPage('https://webrtc.kbm.ink')}><del>mini-projects</del><br />WebRTC</div>
+        <div id="home-p3" className="home-p" onClick={()=>turnPage('/hut')}><del>mini-projects</del><br /><del>WebRTC</del><br /><del>links</del><br />hut</div>
         <div id="home-p4" className="home-p" onClick={()=>turnPage('/record')}>
           <p id="home-p4-1">R</p>
           <p id="home-p4-2">E</p>
