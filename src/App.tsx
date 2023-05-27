@@ -4,6 +4,8 @@ import routes from './routers/main/PCRouter';
 import HomeRoute from './routers';
 import { BrowserRouter } from "react-router-dom";
 import Provider from './redux/store';
+import { GlobalScrollbar } from 'mac-scrollbar';
+import 'mac-scrollbar/dist/mac-scrollbar.css';
 
 const IsPC = () => {
   const userAgentInfo = navigator.userAgent;
@@ -24,20 +26,29 @@ function App() {
   console.log('========');
   if(IsPC()){
     return (
-      <Provider>
-        <BrowserRouter>
-          <HomeRoute routes={routes} />
-        </BrowserRouter>
-      </Provider>
+      <>
+        <Provider>
+          <BrowserRouter>
+            <HomeRoute routes={routes} />
+          </BrowserRouter>
+        </Provider>
+        <GlobalScrollbar />
+      </>
     );
   }
   return(
-    <NotPC/>
-    // <Provider>
-    //   <BrowserRouter>
-    //     <HomeRoute routes={routes} />
-    //   </BrowserRouter>
-    // </Provider>
+    <>
+      <NotPC/>
+      <GlobalScrollbar />
+    </>
+    // <>
+    //   <Provider>
+    //     <BrowserRouter>
+    //       <HomeRoute routes={routes} />
+    //     </BrowserRouter>
+    //   </Provider>
+    //   <GlobalScrollbar />
+    // </>
   )
 
 }
