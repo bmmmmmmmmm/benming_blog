@@ -66,15 +66,23 @@
   display: flex;
   justify-content: space-around;
   // background-color: #000;
-  svg {
-    border-radius: 50%;
-    fill: #333333;
+
+  .note-content-aboutme-relate-clickbox {
     width: 2vw;
     height: 2vw;
-  }
+    border-radius: 1vw;
+    overflow: hidden;
 
-  svg:hover {
-    fill: #fff;
-    background-color: #333;
+    svg {
+      border-radius: 50%;
+      fill: #333333;
+      width: 2vw;
+      height: 2vw;
+    }
+  
+    svg:hover {
+      fill: #fff;
+      background-color: #333;
+    }
   }
 }
