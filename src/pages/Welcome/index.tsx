@@ -54,6 +54,11 @@ const Welcome: FC = (): ReactElement => {
     }, 5);
   }
 
+  const wel_content = ['“我看见这一代最杰出的头脑毁于正常”', '“我还看到庸才自命不凡蠢人乐不可支”']
+  const [isContent1, setIsContent1] = useState<boolean>(false)
+
+  const onWelContentClick = () => setIsContent1(!isContent1)
+
   return (
     <div>
       <h1 id="wel-tittle">本明的<br/>个人博客</h1>
@@ -63,7 +68,7 @@ const Welcome: FC = (): ReactElement => {
       <div id="wel-background" ref={bg} style={{ backgroundPosition: bgPosition }}>
         <span>HELLO</span>
       </div>
-      <div id="wel-content">
+      <div id="wel-content" onClick={onWelContentClick}>
         {/* 该发生的<br/>
         总会发生<br/>
         该在发生时引起其他事情发生的<br/>
@@ -71,13 +76,13 @@ const Welcome: FC = (): ReactElement => {
         该在发生时引起本身再次发生的<br/>
         总会再次发生<br/>
         然而，时间上不必总是遵循前后顺序<br/> */}
-        <p style={{color: '#fff', opacity: '1'}}>“我看见这一代最杰出的头脑毁于正常”</p>
-        <p style={{color: '#ddd'}}>“我看见这一代最杰出的头脑毁于正常”</p>
-        <p style={{color: '#bbb'}}>“我看见这一代最杰出的头脑毁于正常”</p>
-        <p style={{color: '#999'}}>“我看见这一代最杰出的头脑毁于正常”</p>
-        <p style={{color: '#777'}}>“我看见这一代最杰出的头脑毁于正常”</p>
-        <p style={{color: '#666'}}>“我看见这一代最杰出的头脑毁于正常”</p>
-        <p style={{color: '#555'}}>“我看见这一代最杰出的头脑毁于正常”</p>
+        <p style={{color: '#fff', opacity: '1'}}>{wel_content[Number(isContent1)]}</p>
+        <p style={{color: '#ddd'}}>{wel_content[Number(isContent1)]}</p>
+        <p style={{color: '#bbb'}}>{wel_content[Number(isContent1)]}</p>
+        <p style={{color: '#999'}}>{wel_content[Number(isContent1)]}</p>
+        <p style={{color: '#777'}}>{wel_content[Number(isContent1)]}</p>
+        <p style={{color: '#666'}}>{wel_content[Number(isContent1)]}</p>
+        <p style={{color: '#555'}}>{wel_content[Number(isContent1)]}</p>
       </div>
       <button id="wel-btn" onClick={play}>WELCOME</button>
     </div>
