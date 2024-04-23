@@ -77,7 +77,7 @@ const InNote:FC = ():ReactElement => {
         
       if(toc.length) {
         setCatlog(toc);
-        setCatlogShow(true)
+        // setCatlogShow(true)
       }
     }
 
