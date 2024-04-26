@@ -34,8 +34,12 @@ const routes: Routes[] = [
     path: "/thinking",
     component: Thinking,
   },
+  // {
+  //   path: "/hut",
+  //   component: Hut,
+  // },
   {
-    path: "/hut",
+    path: "/demo",
     component: Hut,
   },
   {
