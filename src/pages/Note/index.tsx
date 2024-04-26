@@ -1,4 +1,4 @@
-import React, { FC, ReactElement, useEffect } from 'react';
+import React, { FC, ReactElement, useCallback, useEffect } from 'react';
 import { createUpdateNoteAction, createUpdateMyInfoAction } from '../../redux/actions';
 import connect from '../../redux/connect';
 import { showNotes } from '../../util/api/notes';
@@ -12,30 +12,35 @@ import './index.scss'
 
 
 const Note:FC = (props: any):ReactElement => {
-
   const { updateNote, updateMyInfo } = props;
+
+  const gainNotes = useCallback(async ()=> {
+    try {
+      const result:any = await showNotes()
+      if(result.data.masg === "success!")
+        updateNote(result.data.data)
+    } catch (error) {
+      console.error(error);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  const gainMyInfo = useCallback(async ()=> {
+    try {
+      const result:any = await getMyInfo()
+      if(result.data.masg === "success!")
+        updateMyInfo(result.data.data[0])
+    } catch (error) {
+      console.error(error);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   useEffect(() => {
-    const gainNotes = async ()=> {
-      try {
-        const result:any = await showNotes()
-        if(result.data.masg === "success!")
-          updateNote(result.data.data)
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    const gainMyInfo = async ()=> {
-      try {
-        const result:any = await getMyInfo()
-        if(result.data.masg === "success!")
-          updateMyInfo(result.data.data[0])
-      } catch (error) {
-        console.log(error);
-      }
-    }
+    console.log('===========updateNotes&Info');
     gainNotes();
     gainMyInfo()
-  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [gainMyInfo, gainNotes])
 
   return (
     <div>
@@ -54,8 +59,8 @@ const mapStateToProps = (state: any) => ({
 })
 
 const mapDispatchToProps = (dispatch: any) => ({
-  updateNote: (notes:NoteItemType[])=>dispatch(createUpdateNoteAction(notes)),
-  updateMyInfo: (myInfo: myInfoType)=>dispatch(createUpdateMyInfoAction(myInfo))
+  updateNote: (notes:NoteItemType[]) => dispatch(createUpdateNoteAction(notes)),
+  updateMyInfo: (myInfo: myInfoType) => dispatch(createUpdateMyInfoAction(myInfo))
 })
 
 export default connect({ mapStateToProps, mapDispatchToProps })(Note);
