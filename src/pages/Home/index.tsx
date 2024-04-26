@@ -23,7 +23,7 @@ const Home:FC = ():ReactElement => {
           <p>Think</p>
           <p>ing</p>
         </div>
-        <div id="home-p3" className="home-p" onClick={()=>turnPage('/hut')}><del>mini-projects</del><br /><del>WebRTC</del><br /><del>links</del><br />hut</div>
+        <div id="home-p3" className="home-p" onClick={()=>turnPage('/demo')}><del>mini-projects</del><br /><del>WebRTC</del><br /><del>links</del><br /><del>hut</del><br />Demo</div>
         <div id="home-p4" className="home-p" onClick={()=>turnPage('/record')}>
           <p id="home-p4-1">R</p>
           <p id="home-p4-2">E</p>
