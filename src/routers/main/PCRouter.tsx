@@ -10,6 +10,9 @@ import {
   InNote,
   AddNote,
 } from '../../pages'
+import {
+  // Note
+} from '../../pages2404'
 import { Routes } from '../Typings/router'
 
 
