@@ -8,7 +8,8 @@ import { myInfoType } from './Content/AboutMe/typings';
 import TopBar from '../../components/TopBar';
 import Banner from './Banner';
 import Content from './Content';
-import './index.scss'
+// import './index.scss'
+import './index2404.scss'
 
 
 const Note:FC = (props: any):ReactElement => {
@@ -46,7 +47,8 @@ const Note:FC = (props: any):ReactElement => {
     <div>
       <TopBar/>
       <div id="note">
-        <Banner/>
+        {/* <Banner/> */}
+        <img id="note-banner" src='http://blog-oss.kbm.ink/114939.jpg' alt="benming" />
         <Content/>
       </div>
     </div>
