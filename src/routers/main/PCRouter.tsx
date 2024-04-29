@@ -13,6 +13,7 @@ import {
 import {
   // Note
 } from '../../pages2404'
+import KeyCode from '../../pages/KeyCode';
 import { Routes } from '../Typings/router'
 
 
@@ -56,6 +57,10 @@ const routes: Routes[] = [
   {
     path: "/addNote",
     component: AddNote,
+  },
+  {
+    path: "/kc",
+    component: KeyCode,
   },
   {
     path: "/",
