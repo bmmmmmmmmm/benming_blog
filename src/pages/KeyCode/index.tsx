@@ -2,8 +2,16 @@ import { useCallback, useEffect, useState } from 'react';
 import './index.scss'
 
 type KeyCodeShow = {
-  Key: string,
-  Code: number
+  key: string,
+  keyCode: number,
+  which: number,
+  code: string,
+  location: number,
+  altKey: boolean,
+  ctrlKey: boolean,
+  metaKey: boolean,
+  shiftKey: boolean,
+  repeat: boolean
 }
 
 const KeyCode = () => {
@@ -13,10 +21,8 @@ const KeyCode = () => {
     e.preventDefault();
     e.stopPropagation();
     // console.log('=====\n', e, JSON.stringify(e));
-    setKeyInfo({
-      Key: `${e.key} | ${e.code}`,
-      Code: e.keyCode || e.which
-    })
+    const { key, keyCode, which, code, location, altKey, ctrlKey, metaKey, shiftKey, repeat } = e;
+    setKeyInfo({ key, keyCode, which, code, location, altKey, ctrlKey, metaKey, shiftKey, repeat })
   }, [])
 
   useEffect(() => {
@@ -29,7 +35,7 @@ const KeyCode = () => {
   return (
     <div id="key-code">
       <h1>{`JavaScript Key Code`}</h1>
-      <h2>{JSON.stringify(keyInfo)}</h2>
+      <pre>{JSON.stringify(keyInfo, null, 2)}</pre>
     </div>
   );
 }
