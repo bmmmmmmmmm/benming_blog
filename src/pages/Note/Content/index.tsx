@@ -3,6 +3,7 @@ import AboutMe from './AboutMe';
 import Notes from './Notes';
 // import Motto from './Motto';
 import Life from './Life';
+import Love from './Love';
 // import TotalTag from './TotalTag';
 import './index.scss'
 
@@ -38,6 +39,7 @@ const Content:FC = ():ReactElement => {
       <div id="note-content-right" ref={right}>
         <AboutMe/>
         <Life/>
+        <Love/>
         {/* <TotalTag/> */}
         {/* <Motto/> */}
       </div>

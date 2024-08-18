@@ -1,7 +1,8 @@
 import React, { FC, ReactElement, useState, useEffect } from 'react';
 import './index.scss'
 
-const myBirth = 970243200000
+// const myBirth = 970243200000
+const myBirth = new Date("2000-09-30T00:00:00+0800").getTime();
 
 const Life:FC = ():ReactElement => {
 
